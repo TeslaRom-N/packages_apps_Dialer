@@ -25,4 +25,12 @@
     <string name="prox_auto_speaker_incall_only_title">Nur während Gespräch</string>
     <string name="prox_auto_speaker_incall_only_summary_on">Bei abgehenden Anrufe, wird erst aktiv wenn Empfänger antwortet</string>
     <string name="prox_auto_speaker_incall_only_summary_off">Hörer wird während aller abgenommen Verbindungsstati aktiv sein (Standard)</string>
+
+    <!-- In-call vibrate options -->
+    <string name="incall_vibration_category_title">In Anruf Vibration</string>
+    <string name="incall_vibrate_outgoing_title">Vibrieren auf Antwort</string>
+    <string name="vibrate_call_waiting">Vibrieren bei Anklopfen</string>
+    <string name="incall_vibrate_hangup_title">Vibrieren bei auflegen</string>
+    <string name="incall_vibrate_45_title">Jede Minute vibrieren</string>
+    <string name="incall_vibrate_45_summary">Vibriert bei 45s jeder Minute während abgehender Gespräche</string>
 </resources>
