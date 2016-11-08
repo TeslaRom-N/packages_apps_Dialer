@@ -1172,6 +1172,11 @@ public class CallCardPresenter extends Presenter<CallCardPresenter.CallCardUi>
         // No-op - the Call Card is the origin of this event.
     }
 
+    @Override
+    public void onSendStaticImageStateChanged(boolean isEnabled) {
+        //No-op
+    }
+
     private boolean isPrimaryCallActive() {
         return mPrimary != null && mPrimary.getState() == Call.State.ACTIVE;
     }
