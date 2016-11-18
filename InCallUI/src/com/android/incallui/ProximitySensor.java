@@ -324,11 +324,7 @@ public class ProximitySensor implements AccelerometerListener.OrientationListene
                     .add("aud", CallAudioState.audioRouteToString(audioMode))
                     .toString());
 
-            final boolean proximityOnWake = CMSettings.System.getInt(mContext.getContentResolver(),
-                    CMSettings.System.PROXIMITY_ON_WAKE, 1) == 1;
-
-            if ((mIsPhoneOffhook || (mHasIncomingCall && proximityOnWake))
-                    && !screenOnImmediately) {
+            if ((mIsPhoneOffhook || mHasIncomingCall) && !screenOnImmediately) {
                 Log.d(this, "Turning on proximity sensor");
                 // Phone is in use!  Arrange for the screen to turn off
                 // automatically when the sensor detects a close object.
