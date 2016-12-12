@@ -536,7 +536,7 @@ public class CallButtonPresenter extends Presenter<CallButtonPresenter.CallButto
         ui.showButton(BUTTON_UPGRADE_TO_VIDEO, showUpgradeToVideo && !mEnhanceEnable);
         ui.showButton(BUTTON_DOWNGRADE_TO_AUDIO, showDowngradeToAudio && !useExt);
         ui.showButton(BUTTON_SWITCH_CAMERA, isVideo);
-        ui.showButton(BUTTON_PAUSE_VIDEO, isVideo && !useExt && !useCustomVideoUi);
+        ui.showButton(BUTTON_PAUSE_VIDEO, isVideo);
         if (isVideo) {
             getUi().setVideoPaused(!VideoUtils.isTransmissionEnabled(call));
         }
