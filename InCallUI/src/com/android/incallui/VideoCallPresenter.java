@@ -1305,7 +1305,11 @@ public class VideoCallPresenter extends Presenter<VideoCallPresenter.VideoCallUi
         mAutoFullScreenPending = false;
     }
 
-    private static void updateCameraSelection(Call call) {
+    private static boolean isAudioRouteEnabled(int audioRoute, int audioRouteMask) {
+        return ((audioRoute & audioRouteMask) != 0);
+    }
+
+    private void updateCameraSelection(Call call) {
         Log.d(TAG, "updateCameraSelection: call=" + call);
         Log.d(TAG, "updateCameraSelection: call=" + toSimpleString(call));
 

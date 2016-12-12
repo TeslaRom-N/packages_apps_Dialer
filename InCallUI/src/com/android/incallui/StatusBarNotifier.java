@@ -339,6 +339,8 @@ public class StatusBarNotifier implements InCallPresenter.InCallStateListener,
 
         final boolean isVideoUpgradeRequest = call.getSessionModificationState()
                 == Call.SessionModificationState.RECEIVED_UPGRADE_TO_VIDEO_REQUEST;
+        final Call pendingAccountSelectionCall = CallList.getInstance()
+                .getWaitingForAccountCall();
         final int notificationType;
         if (callState == Call.State.INCOMING || callState == Call.State.CALL_WAITING
                 || isVideoUpgradeRequest) {
